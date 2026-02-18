@@ -1,0 +1,17 @@
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments and uv cache
+.venv/
+.uv-cache/
+
+# Test / tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Experiment outputs
+log/
+results/

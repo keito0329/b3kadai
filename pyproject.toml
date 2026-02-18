@@ -1,0 +1,40 @@
+[project]
+name = "graph-recsys"
+version = "0.1.0"
+requires-python = ">=3.7,<3.11"
+dependencies = [
+    "cython",
+    "gdown",
+    "hyperopt",
+    "numpy",
+    "pandas",
+    "pillow",
+    "pyyaml",
+    "scikit-learn",
+    "scipy",
+    "tensorflow==2.10.1",
+    "tensorflow-io-gcs-filesystem==0.31.0",
+    "torch==1.12.1+cu113",
+    "torchvision==0.13.1+cu113",
+    "torch-scatter",
+    "torch-sparse",
+    "torch-cluster",
+    "torch-spline-conv",
+    "torch-geometric",
+    "tqdm",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu113"
+url = "https://download.pytorch.org/whl/cu113"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu113" }
+torchvision = { index = "pytorch-cu113" }
+
+[tool.uv.extra-build-dependencies]
+torch-scatter = ["torch"]
+torch-sparse = ["torch"]
+torch-cluster = ["torch"]
+torch-spline-conv = ["torch"]
