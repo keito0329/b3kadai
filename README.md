@@ -151,3 +151,6 @@ $ python3.8 -u start_experiments_user_groups.py \
 $ --dataset {dataset_name} \
 $ --hop {hop_number}
 ```
+
+## hyperoptのやつを書き換える問題
+`.venv/lib/python3.10/site-packages/hyperopt/fmin.py` の 279行目の `self.rstate.integers` を `self.rstate.randint` に書き換える
